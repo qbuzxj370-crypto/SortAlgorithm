@@ -6,7 +6,7 @@ package main.java.sort.trace;
  * 요구사항
  * 	이벤트 종류 및 관련 정보를 저장할 수 있어야 한다.
  * 	필요 시 배열 상태 스냅샷을 포함할 수 있어야 한다.
- * 	기록 및 재생 목적으로 활용 가능해야 한다.
+ * 	RecordingTraceListener 같은 기록 및 재생 목적의 구현체가 List<TraceEvent>로 저장 가능해야 한다.
  * 
  * 제약
  * 	정렬 알고리즘 로직을 포함하지 않는다.

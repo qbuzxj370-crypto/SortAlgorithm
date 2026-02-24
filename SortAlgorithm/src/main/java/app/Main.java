@@ -1,5 +1,7 @@
 package main.java.app;
 
+import main.java.sort.*;
+import main.java.sort.algorithms.*;
 /*
  * 기능: 애플리케이션 실행 엔트리 포인트.
  * 
@@ -14,5 +16,5 @@ package main.java.app;
  */
 
 public class Main {
-
+	
 }

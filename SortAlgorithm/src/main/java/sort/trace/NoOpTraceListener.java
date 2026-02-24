@@ -11,6 +11,6 @@ package main.java.sort.trace;
  * 	출력, 저장, 로깅 등의 추가 동작을 포함하지 않는다.
  */
 
-public class NoOpTraceListener {
-
+public class NoOpTraceListener extends TraceListener {
+	
 }

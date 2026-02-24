@@ -13,5 +13,15 @@ package main.java.sort.util;
  */
 
 public class ArrayUtils {
+	static void swap(int[] arr, int i, int j) {
+		
+	}
 
+	static boolean isSorted(int[] arr) {
+		return true;
+	}
+
+	static int[] copyOf(int[] arr) {
+		return arr;
+	}
 }

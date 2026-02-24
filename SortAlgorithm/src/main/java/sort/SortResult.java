@@ -12,5 +12,8 @@ package main.java.sort;
  * 	Sorter 인터페이스를 단순화하려면 이 클래스는 나중에 도입해도 된다.
  */
 public class SortResult {
-
+	long elapsedNanos;
+	long comparisons;
+	long swaps;
+	boolean sorted;
 }

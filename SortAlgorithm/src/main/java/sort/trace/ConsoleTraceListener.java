@@ -14,5 +14,10 @@ package main.java.sort.trace;
  */
 
 public class ConsoleTraceListener {
+	ConsoleTraceListener(TraceLevel level) {
+	}
 
+	ConsoleTraceListener(TraceLevel level, int maxLogs) {
+
+	}
 }
