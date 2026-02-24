@@ -1,5 +1,7 @@
 package main.java.sort.util;
 
+import java.util.Arrays;
+
 /*
  * 기능: 배열 관련 공통 유틸리티 제공.
  * 
@@ -12,16 +14,37 @@ package main.java.sort.util;
  * 	상태를 가지지 않는 정적 유틸리티 형태로 구성한다.
  */
 
-public class ArrayUtils {
-	static void swap(int[] arr, int i, int j) {
-		
+public final class ArrayUtils {
+	
+	// 인스턴스화 방지
+	private ArrayUtils() {}
+	
+	public static void swap(int[] arr, int i, int j) {
+		if (arr == null) {
+            throw new IllegalArgumentException("Array must not be null");
+        }
+		int temp = arr[j];
+		arr[j] = arr[i];
+		arr[i]= temp;
 	}
 
-	static boolean isSorted(int[] arr) {
-		return true;
+	public static boolean isSorted(int[] arr) {
+		if (arr == null || arr.length < 2) {
+            return true;
+        }
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+        return true;
 	}
 
-	static int[] copyOf(int[] arr) {
-		return arr;
+	public static int[] copyOf(int[] arr) {
+		if (arr == null) {
+            return null;
+        }
+        return Arrays.copyOf(arr, arr.length);
 	}
 }
