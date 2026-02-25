@@ -36,8 +36,12 @@ public class BubbleSort implements Sorter {
 	    }
 		
 		for(int i = 0; i < arr.length - 1; i++) {
-			for(int j = 1; j < arr.length - 1 - i; j++) {
-				trace.onCompare(j, j + 1, arr);
+			
+			boolean swapped = false;
+			
+			for (int j = 0; j < arr.length - 1 - i; j++) {
+
+	            trace.onCompare(j, j + 1, arr);
 
 	            if (arr[j] > arr[j + 1]) {
 
@@ -45,11 +49,16 @@ public class BubbleSort implements Sorter {
 	                arr[j] = arr[j + 1];
 	                arr[j + 1] = temp;
 
+	                swapped = true;
+
 	                trace.onSwap(j, j + 1, arr);
 	            }
 	        }
-
 	        trace.onPassEnd(i + 1, arr);
+	        
+	        if (!swapped) {
+	            break; // 정렬 완료 시 종료
+	        }
 		}
 	}
 }
