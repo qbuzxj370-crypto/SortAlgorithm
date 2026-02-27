@@ -20,13 +20,9 @@ public class DataGenerator {
 	
 	/**랜덤 배열*/
 	public static int[] random(int n, int seed, int bound) {
-		if (n < 0) {
-            throw new IllegalArgumentException("Size must be >= 0");
-        }
 
-        if (bound <= 0) {
-            throw new IllegalArgumentException("Bound must be > 0");
-        }
+		validateSize(n);
+		validateBound(bound);
 
         Random random = new Random(seed);
         int[] arr = new int[n];
@@ -40,9 +36,8 @@ public class DataGenerator {
 	
 	/**오릉차순 배열*/
 	public static int[] sorted(int n) {
-		if (n < 0) {
-            throw new IllegalArgumentException("Size must be >= 0");
-        }
+
+		validateSize(n);
 
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
@@ -55,9 +50,8 @@ public class DataGenerator {
 	
 	/**내림치순 배열*/
 	public static int[] reversed(int n) {
-		if (n < 0) {
-            throw new IllegalArgumentException("Size must be >= 0");
-        }
+
+		validateSize(n);
 
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
@@ -70,15 +64,14 @@ public class DataGenerator {
 	/**중복이 믾은 배열*/
 	public static int[] duplicates(int n, int distinctCount, int seed) {
 
-	    if (n < 0) {
-	        throw new IllegalArgumentException("Size must be >= 0");
-	    }
+
+		validateSize(n);
 
 	    if (distinctCount <= 0 || distinctCount > n) {
 	        throw new IllegalArgumentException("distinctCount must be between 1 and n");
 	    }
 
-	    java.util.Random random = new java.util.Random(seed);
+	    Random random = new Random(seed);
 	    int[] arr = new int[n];
 
 	    for (int i = 0; i < n; i++) {
@@ -87,8 +80,31 @@ public class DataGenerator {
 
 	    return arr;
 	}
+	/**음수 포함 배열*/
+	public static int[] negativeIncluded(int n, int seed, int bound) {
 
-	public static int[] negativeIncluded(int n, int seed) {
-		
+		validateSize(n);
+		validateBound(bound);
+
+	    Random random = new Random(seed);
+	    int[] arr = new int[n];
+
+	    for (int i = 0; i < n; i++) {
+	        arr[i] = random.nextInt(bound * 2) - bound;
+	    }
+
+	    return arr;
+	}
+	
+	private static void validateSize(int n) {
+	    if (n < 0) {
+	        throw new IllegalArgumentException("Size must be >= 0");
+	    }
+	}
+
+	private static void validateBound(int bound) {
+	    if (bound <= 0) {
+	        throw new IllegalArgumentException("Bound must be > 0");
+	    }
 	}
 }
