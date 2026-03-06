@@ -72,12 +72,12 @@ Arrays.sort() 결과와 비교하여 정확성 검증.
 
 ## 4. 구현 예정 알고리즘
 
-- Bubble Sort
-- Selection Sort
-- Insertion Sort
-- Merge Sort
-- Quick Sort
-- Heap Sort
+- [o] Bubble Sort
+- [ ] Selection Sort
+- [ ] Insertion Sort
+- [ ] Merge Sort
+- [ ] Quick Sort
+- [ ] Heap Sort
 
 ---
 
@@ -92,6 +92,20 @@ Arrays.sort() 결과와 비교하여 정확성 검증.
 
 Trace 구현은 알고리즘 코드와 분리된 Listener 구조로 관리한다.
 
+### Trace 구성 요소
+
+- **TraceListener**
+	- 정렬 과정에서 발생하는 이벤트를 외부로 전달하는 인터페이스
+
+- **NoOpTraceListener**
+	- 아무 동작도 하지 않는 기본 구현
+
+- **ConsoleTraceListener**
+	- 이벤트를 콘솔에 출력하는 구현체
+
+- **TraceLevel**
+	- 출력 범위를 제어하는 enum
+
 ---
 
 ## 6. 향후 확장 계획
@@ -102,14 +116,33 @@ Trace 구현은 알고리즘 코드와 분리된 Listener 구조로 관리한다
 
 ---
 
-## 7. 개발 환경
+## 7. 테스트
+
+프로젝트는 공통 테스트 클래스 `SorterTest`를 통해 모든 정렬 알고리즘의 정확성을 검증한다.
+
+검증 방식
+
+- Java 표준 `Arrays.sort()` 결과와 비교
+- 다양한 입력 데이터 패턴 테스트
+
+테스트 데이터 종류
+
+- Random
+- Sorted
+- Reversed
+- Duplicates
+- Negative included
+
+---
+
+## 8. 개발 환경
 
 - Java 23 이상
 - Eclipse IDE
 
 ---
 
-## 8. 커밋 전략
+## 9. 커밋 전략
 
 - 기능 단위 커밋 유지
 - 알고리즘 1개 구현 시 1 커밋
