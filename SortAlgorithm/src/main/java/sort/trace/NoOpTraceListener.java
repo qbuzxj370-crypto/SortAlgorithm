@@ -11,6 +11,24 @@ package sort.trace;
  * 	출력, 저장, 로깅 등의 추가 동작을 포함하지 않는다.
  */
 
-public class NoOpTraceListener extends TraceListener {
+public class NoOpTraceListener implements TraceListener {
+
+	@Override
+	public void onCompare(int i, int j, int[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSwap(int i, int j, int[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPassEnd(int pass, int[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

@@ -14,5 +14,4 @@ package sort.trace;
  */
 
 public class TraceEvent {
-
 }

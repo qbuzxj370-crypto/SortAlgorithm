@@ -9,17 +9,9 @@ package sort.trace;
  * 제약
  * 	알고리즘은 “무슨 출력”을 할지 몰라야 한다. 이벤트만 던진다.
  */
-public class TraceListener {
-	public void onCompare(int i, int j, int[] arr) {
-		
-	}
-	public void onSwap (int i, int j, int[] arr) {
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = arr[i];
-	}
-	public void onPassEnd(int pass, int[] arr) {
-		
-	}
+public interface TraceListener {
 
+    void onCompare(int i, int j, int[] arr);
+    void onSwap(int i, int j, int[] arr);
+    void onPassEnd(int pass, int[] arr);
 }

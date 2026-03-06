@@ -15,8 +15,18 @@ package sort.trace;
  */
 
 public enum TraceLevel {
-	NONE,      // 출력 없음
-    PASS,      // 패스 종료 시점만 출력
-    SWAP,      // 교환 발생 시 출력
-    COMPARE    // 비교 단계까지 출력
+	NONE(0),      // 출력 없음
+    PASS(1),      // 패스 종료 시점만 출력
+    SWAP(2),      // 교환 발생 시 출력
+    COMPARE(3);    // 비교 단계까지 출력
+	
+    private final int priority;
+    
+    TraceLevel(int priority) {
+        this.priority = priority;
+    }
+
+    public boolean allows(TraceLevel requiredLevel) {
+        return this.priority >= requiredLevel.priority;
+    }
 }
