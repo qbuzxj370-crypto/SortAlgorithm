@@ -1,4 +1,4 @@
-package main.java.sort;
+package sort;
 
 /*
  * 기능: 정렬 실행 결과를 요약해서 반환(통계/검증/추적 개수 등).

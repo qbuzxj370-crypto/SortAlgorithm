@@ -1,4 +1,4 @@
-package main.java.sort.trace;
+package sort.trace;
 
 /*
  * 기능: 정렬 과정에서 발생한 이벤트를 구조화하여 표현하는 데이터 객체.

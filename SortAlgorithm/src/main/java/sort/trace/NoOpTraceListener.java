@@ -1,4 +1,4 @@
-package main.java.sort.trace;
+package sort.trace;
 
 /*
  * 기능: 아무 동작도 수행하지 않는 TraceListener 기본 구현.

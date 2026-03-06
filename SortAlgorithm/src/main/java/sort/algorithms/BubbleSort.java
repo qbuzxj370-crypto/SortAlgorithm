@@ -1,7 +1,7 @@
-package main.java.sort.algorithms;
+package sort.algorithms;
 
-import main.java.sort.Sorter;
-import main.java.sort.trace.*;
+import sort.Sorter;
+import sort.trace.*;
 
 /*
  * 기능: 정렬 과정 이벤트를 메모리에 기록하는 구현체.

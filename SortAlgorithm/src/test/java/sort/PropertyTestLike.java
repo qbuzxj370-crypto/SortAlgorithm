@@ -1,4 +1,4 @@
-package test.java.sort;
+package sort;
 
 public class PropertyTestLike {
 

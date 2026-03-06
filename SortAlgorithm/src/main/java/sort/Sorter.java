@@ -1,6 +1,6 @@
-package main.java.sort;
+package sort;
 
-import main.java.sort.trace.TraceListener;
+import sort.trace.TraceListener;
 
 /*
  * 기능: 모든 정렬 알고리즘이 공통으로 따르는 계약 정의.

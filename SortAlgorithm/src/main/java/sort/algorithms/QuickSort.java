@@ -1,4 +1,4 @@
-package main.java.sort.algorithms;
+package sort.algorithms;
 
 /*
  * 기능: 퀵 정렬 알고리즘 구현.

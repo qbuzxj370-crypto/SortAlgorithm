@@ -1,4 +1,4 @@
-package main.java.sort.trace;
+package sort.trace;
 
 /*
  * 기능: 정렬 과정 추적(Trace)의 출력 범위를 정의하는 열거형.

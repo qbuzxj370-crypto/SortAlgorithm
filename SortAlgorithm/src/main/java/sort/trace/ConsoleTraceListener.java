@@ -1,4 +1,4 @@
-package main.java.sort.trace;
+package sort.trace;
 
 /*
  * 기능: 정렬 과정 이벤트를 콘솔에 출력하는 구현체.

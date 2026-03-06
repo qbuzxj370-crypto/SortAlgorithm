@@ -1,4 +1,4 @@
-package main.java.sort.trace;
+package sort.trace;
 /*
  * 기능: 정렬 과정에서 발생하는 이벤트를 외부로 전달하는 계약.
  * 요구사항
@@ -10,11 +10,13 @@ package main.java.sort.trace;
  * 	알고리즘은 “무슨 출력”을 할지 몰라야 한다. 이벤트만 던진다.
  */
 public class TraceListener {
-	public void onCompare(int i, int j,int[] arr) {
+	public void onCompare(int i, int j, int[] arr) {
 		
 	}
-	public void onSwap (int i, int j,int[] arr) {
-		
+	public void onSwap (int i, int j, int[] arr) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = arr[i];
 	}
 	public void onPassEnd(int pass, int[] arr) {
 		
