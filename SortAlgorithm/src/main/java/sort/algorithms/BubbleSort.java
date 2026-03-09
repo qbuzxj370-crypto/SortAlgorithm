@@ -2,6 +2,7 @@ package sort.algorithms;
 
 import sort.Sorter;
 import sort.trace.*;
+import sort.util.ArrayUtils;
 
 /*
  * 기능: 버블 정렬 알고리즘 구현.
@@ -35,21 +36,16 @@ public class BubbleSort implements Sorter {
 	    }
 		
 		for(int i = 0; i < arr.length - 1; i++) {
-			
 			boolean swapped = false;
 			
 			for (int j = 0; j < arr.length - 1 - i; j++) {
-
 	            trace.onCompare(j, j + 1, arr);
 
 	            if (arr[j] > arr[j + 1]) {
-
-	                int temp = arr[j];
-	                arr[j] = arr[j + 1];
-	                arr[j + 1] = temp;
-
+	                ArrayUtils.swap(arr, j, j + 1);
+	                
 	                swapped = true;
-
+	                
 	                trace.onSwap(j, j + 1, arr);
 	            }
 	        }

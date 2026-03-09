@@ -17,6 +17,7 @@ import sort.util.ArrayUtils;
  */
 
 public class SelectionSort implements Sorter  {
+	
 	@Override
 	public String name() {
 		// TODO Auto-generated method stub
@@ -33,18 +34,17 @@ public class SelectionSort implements Sorter  {
 	        trace = new NoOpTraceListener();
 	    }
 		
-		for(int i = 0; i < arr.length - 1; i++) {
-			
+		for(int i = 0; i < arr.length; i++) {
 			int minIdx = i;
 			
-			for (int j = i+1; j < arr.length - 1 - i; j++) {
-
+			for (int j = i+1; j < arr.length; j++) {
 				trace.onCompare(minIdx, j, arr);
 
 	            if (arr[minIdx] > arr[j]) {
 	                minIdx = j;
 	            }
 	        }
+			
 			if (minIdx != i) {
                 ArrayUtils.swap(arr, i, minIdx);
                 trace.onSwap(i, minIdx, arr);
