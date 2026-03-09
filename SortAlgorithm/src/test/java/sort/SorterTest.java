@@ -8,10 +8,9 @@ import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import sort.algorithms.BubbleSort;
-import sort.trace.NoOpTraceListener;
-import sort.util.ArrayUtils;
-import sort.util.DataGenerator;
+import sort.algorithms.*;
+import sort.trace.*;
+import sort.util.*;
 
 /*
  * 기능: 모든 정렬 알고리즘 구현에 대해 공통 동작을 검증하는 테스트 클래스.
@@ -32,7 +31,7 @@ public class SorterTest {
 	/**테스트 대상이 되는 Sorter 구현체 목록을 제공*/
     static Stream<Sorter> sorterProvider() {
         return Stream.of(
-            new BubbleSort()
+            new SelectionSort()
         );
     }
 
@@ -44,7 +43,7 @@ public class SorterTest {
         int[] expected = ArrayUtils.copyOf(actual);
 
         java.util.Arrays.sort(expected);
-        sorter.sort(actual, new NoOpTraceListener());
+        sorter.sort(actual, new ConsoleTraceListener(TraceLevel.COMPARE));
 
         assertArrayEquals(expected, actual);
         assertTrue(ArrayUtils.isSorted(actual));
@@ -58,7 +57,7 @@ public class SorterTest {
         int[] expected = ArrayUtils.copyOf(actual);
 
         java.util.Arrays.sort(expected);
-        sorter.sort(actual, new NoOpTraceListener());
+        sorter.sort(actual, new ConsoleTraceListener(TraceLevel.COMPARE));
 
         assertArrayEquals(expected, actual);
         assertTrue(ArrayUtils.isSorted(actual));
@@ -72,7 +71,7 @@ public class SorterTest {
         int[] expected = ArrayUtils.copyOf(actual);
 
         java.util.Arrays.sort(expected);
-        sorter.sort(actual, new NoOpTraceListener());
+        sorter.sort(actual, new ConsoleTraceListener(TraceLevel.COMPARE));
 
         assertArrayEquals(expected, actual);
         assertTrue(ArrayUtils.isSorted(actual));
@@ -114,7 +113,7 @@ public class SorterTest {
         int[] expected = ArrayUtils.copyOf(actual);
 
         java.util.Arrays.sort(expected);
-        sorter.sort(actual, new NoOpTraceListener());
+        sorter.sort(actual, new ConsoleTraceListener(TraceLevel.COMPARE));
 
         assertArrayEquals(expected, actual);
         assertTrue(ArrayUtils.isSorted(actual));
@@ -128,7 +127,7 @@ public class SorterTest {
         int[] expected = ArrayUtils.copyOf(actual);
 
         java.util.Arrays.sort(expected);
-        sorter.sort(actual, new NoOpTraceListener());
+        sorter.sort(actual, new ConsoleTraceListener(TraceLevel.COMPARE));
 
         assertArrayEquals(expected, actual);
         assertTrue(ArrayUtils.isSorted(actual));

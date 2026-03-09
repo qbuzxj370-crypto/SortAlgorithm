@@ -40,7 +40,7 @@ public class ConsoleTraceListener implements TraceListener {
 	@Override
 	public void onCompare(int i, int j, int[] arr) {
         if (canLog(TraceLevel.COMPARE)) {
-            System.out.println("[COMPARE] " + arr[i] + " vs " + arr[j] + " -> " + Arrays.toString(arr));
+            System.out.println("[COMPARE] " + i + " vs " + j + " -> " + Arrays.toString(arr));
             logCount++;
         }
     }
@@ -50,7 +50,7 @@ public class ConsoleTraceListener implements TraceListener {
 	public void onSwap(int i, int j, int[] arr) {
 		// TODO Auto-generated method stub
 		if (canLog(TraceLevel.SWAP)) {
-            System.out.println("[SWAP] " + arr[i] + " <-> " + arr[j] + " -> " + Arrays.toString(arr));
+            System.out.println("[SWAP] " + i + " <-> " + j + " -> " + Arrays.toString(arr));
             logCount++;
         }
 	}
