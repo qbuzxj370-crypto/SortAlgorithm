@@ -31,7 +31,7 @@ public class SorterTest {
 	/**테스트 대상이 되는 Sorter 구현체 목록을 제공*/
     static Stream<Sorter> sorterProvider() {
         return Stream.of(
-            new SelectionSort()
+            new InsertionSort()
         );
     }
 
